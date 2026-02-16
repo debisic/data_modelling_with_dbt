@@ -58,6 +58,7 @@ Raw Data → Staging → Intermediate → Marts → Reporting
 1. **Clone the repository**
    ```bash
    git clone https://github.com/debisic/data_modelling_with_dbt.git
+   cd data_modelling_with_dbt
    ```
 
 2. **Install Python dependencies**
@@ -116,7 +117,6 @@ This script will:
 - Create raw tables in DuckDB (`prod` schema)
 - Data types: Yellow (2019-2020), Green (2019-2020), FHV (2019)
 
-## dbt Commands
 
 ### Build All Models
 ```bash
@@ -170,14 +170,6 @@ taxi_rides_ny/
 ├── packages.yml               # dbt package dependencies
 └── README.md                  # This file
 ```
-
-<!-- ## 🧪 Data Quality Tests
-
-The project includes:
-- Schema tests defined in `schema.yml` files
-- Custom test for fare amounts (`tests/fare_amount.sql`)
-- Unique and not-null constraints on key fields
-- Referential integrity checks -->
 
 ## 🔗 Resources
 
