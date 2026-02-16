@@ -179,4 +179,5 @@ taxi_rides_ny/
 
 # Queries to tasks:
  ## NB
- Queries to tasks can be found in this path: [models/marts/reporting](models/marts/reporting/)
+ - Queries to tasks can be found in this path: [models/marts/reporting](models/marts/reporting/)
+ - Deduplication statistics is found in [analyses](analyses/)
