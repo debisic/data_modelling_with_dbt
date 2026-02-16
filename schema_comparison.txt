@@ -1,0 +1,129 @@
+========================================================================================================================
+TAXI DATA SCHEMA COMPARISON - YELLOW vs GREEN vs FHV
+========================================================================================================================
+
+Field Name                          Yellow Taxi               Green Taxi                FHV Taxi                 
+------------------------------------------------------------------------------------------------------------------------
+Affiliated_base_number              NOT PRESENT               NOT PRESENT               string                    << FHV ONLY
+DOLocationID                        int64                     int64                     NOT PRESENT               << TYPE DIFF
+DOlocationID                        NOT PRESENT               NOT PRESENT               int64                     << FHV ONLY
+PULocationID                        int64                     int64                     NOT PRESENT               << TYPE DIFF
+PUlocationID                        NOT PRESENT               NOT PRESENT               int64                     << FHV ONLY
+RatecodeID                          int64                     int64                     NOT PRESENT               << TYPE DIFF
+SR_Flag                             NOT PRESENT               NOT PRESENT               int64                     << FHV ONLY
+VendorID                            int64                     int64                     NOT PRESENT               << TYPE DIFF
+congestion_surcharge                string                    string                    NOT PRESENT               << TYPE DIFF
+dispatching_base_num                NOT PRESENT               NOT PRESENT               string                    << FHV ONLY
+dropOff_datetime                    NOT PRESENT               NOT PRESENT               timestamp[us]             << FHV ONLY
+ehail_fee                           NOT PRESENT               string                    NOT PRESENT               << GREEN ONLY
+extra                               double                    double                    NOT PRESENT               << TYPE DIFF
+fare_amount                         double                    double                    NOT PRESENT               << TYPE DIFF
+improvement_surcharge               double                    double                    NOT PRESENT               << TYPE DIFF
+lpep_dropoff_datetime               NOT PRESENT               timestamp[us]             NOT PRESENT               << GREEN ONLY
+lpep_pickup_datetime                NOT PRESENT               timestamp[us]             NOT PRESENT               << GREEN ONLY
+mta_tax                             double                    double                    NOT PRESENT               << TYPE DIFF
+passenger_count                     int64                     int64                     NOT PRESENT               << TYPE DIFF
+payment_type                        int64                     int64                     NOT PRESENT               << TYPE DIFF
+pickup_datetime                     NOT PRESENT               NOT PRESENT               timestamp[us]             << FHV ONLY
+store_and_fwd_flag                  string                    string                    NOT PRESENT               << TYPE DIFF
+tip_amount                          double                    double                    NOT PRESENT               << TYPE DIFF
+tolls_amount                        double                    double                    NOT PRESENT               << TYPE DIFF
+total_amount                        double                    double                    NOT PRESENT               << TYPE DIFF
+tpep_dropoff_datetime               timestamp[us]             NOT PRESENT               NOT PRESENT               << YELLOW ONLY
+tpep_pickup_datetime                timestamp[us]             NOT PRESENT               NOT PRESENT               << YELLOW ONLY
+trip_distance                       double                    double                    NOT PRESENT               << TYPE DIFF
+trip_type                           NOT PRESENT               int64                     NOT PRESENT               << GREEN ONLY
+
+========================================================================================================================
+SUMMARY OF DIFFERENCES
+========================================================================================================================
+
+Total fields in Yellow Taxi: 18
+Total fields in Green Taxi: 20
+Total fields in FHV Taxi: 7
+Common fields (all three): 0
+
+Fields ONLY in Yellow Taxi (2):
+  - tpep_dropoff_datetime (timestamp[us])
+  - tpep_pickup_datetime (timestamp[us])
+
+Fields ONLY in Green Taxi (4):
+  - ehail_fee (string)
+  - lpep_dropoff_datetime (timestamp[us])
+  - lpep_pickup_datetime (timestamp[us])
+  - trip_type (int64)
+
+Fields ONLY in FHV Taxi (7):
+  - Affiliated_base_number (string)
+  - DOlocationID (int64)
+  - PUlocationID (int64)
+  - SR_Flag (int64)
+  - dispatching_base_num (string)
+  - dropOff_datetime (timestamp[us])
+  - pickup_datetime (timestamp[us])
+
+Fields with DIFFERENT TYPES (16):
+  - DOLocationID:
+      Yellow: int64
+      Green:  int64
+      FHV:    NOT PRESENT
+  - PULocationID:
+      Yellow: int64
+      Green:  int64
+      FHV:    NOT PRESENT
+  - RatecodeID:
+      Yellow: int64
+      Green:  int64
+      FHV:    NOT PRESENT
+  - VendorID:
+      Yellow: int64
+      Green:  int64
+      FHV:    NOT PRESENT
+  - congestion_surcharge:
+      Yellow: string
+      Green:  string
+      FHV:    NOT PRESENT
+  - extra:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - fare_amount:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - improvement_surcharge:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - mta_tax:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - passenger_count:
+      Yellow: int64
+      Green:  int64
+      FHV:    NOT PRESENT
+  - payment_type:
+      Yellow: int64
+      Green:  int64
+      FHV:    NOT PRESENT
+  - store_and_fwd_flag:
+      Yellow: string
+      Green:  string
+      FHV:    NOT PRESENT
+  - tip_amount:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - tolls_amount:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - total_amount:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
+  - trip_distance:
+      Yellow: double
+      Green:  double
+      FHV:    NOT PRESENT
