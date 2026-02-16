@@ -177,3 +177,6 @@ taxi_rides_ny/
 - [DuckDB Documentation](https://duckdb.org/docs/)
 - [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
 
+# Queries to tasks:
+ ## NB
+ Queries to tasks can be found in this path: [models/marts/reporting](models/marts/reporting/)
