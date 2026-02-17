@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-1.7+-FF694B?style=flat&logo=dbt&logoColor=white)
 ![DuckDB](https://img.shields.io/badge/DuckDB-Latest-FFF000?style=flat&logo=duckdb&logoColor=black)
+![BigQuery](https://img.shields.io/badge/BigQuery-Ready-4285F4?style=flat&logo=googlebigquery&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-Parquet-4479A1?style=flat&logo=postgresql&logoColor=white)
 
 A dbt (data build tool) project for analyzing NYC TLC taxi trip data using DuckDB as the data warehouse. This project transforms raw taxi trip records into analytical models for business intelligence and reporting.
